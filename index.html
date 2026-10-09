@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vighnesh Jayakumar, BCA graduate (2026) open to process associate, operations associate, analyst and entry-level IT roles. AWS projects, experience and resume.">
+<meta property="og:title" content="Vighnesh Jayakumar | Portfolio">
+<meta property="og:description" content="Entry-level IT and operations professional. Experience, AWS security projects, certifications and resume.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230a0a0a'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EVJ%3C/text%3E%3C/svg%3E">
+<title>Vighnesh Jayakumar Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: dark editorial portfolio. Fixed top nav, centered hero with monogram, then alternating dark sections of cards and a timeline. Single deliberate dark theme with a muted gold accent. */
+:root {
+  --bg: #FFFFFF;
+  --bg-alt: #F6F6F6;
+  --card: #FFFFFF;
+  --line: #DADADA;
+  --tint: rgba(0,0,0,0.04);
+  --ink: #0A0A0A;
+  --body: #333333;
+  --muted: #666666;
+  --accent: #0A0A0A;
+  --on-accent: #FFFFFF;
+  --accent-soft: #F0F0F0;
+  --accent-line: #B8B8B8;
+  --font-display: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0A0A0A; --bg-alt: #121212; --card: #161616; --line: #2C2C2C; --tint: var(--tint);
+    --ink: #F5F5F5; --body: #CFCFCF; --muted: #9A9A9A; --accent: #F5F5F5; --on-accent: #0A0A0A;
+    --accent-soft: #1E1E1E; --accent-line: #4A4A4A; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0A0A0A; --bg-alt: #121212; --card: #161616; --line: #2C2C2C; --tint: var(--tint);
+  --ink: #F5F5F5; --body: #CFCFCF; --muted: #9A9A9A; --accent: #F5F5F5; --on-accent: #0A0A0A;
+  --accent-soft: #1E1E1E; --accent-line: #4A4A4A; color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.65 var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+::selection { background: var(--accent); color: var(--on-accent); }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.container { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
+.serif { font-family: var(--font-display); }
+
+/* nav */
+nav { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 100; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; max-width: 1080px; margin: 0 auto; }
+.nav-logo { font: 600 17px var(--font-display); text-decoration: none; color: var(--accent); white-space: nowrap; }
+.nav-links { display: flex; gap: 6px; list-style: none; }
+.nav-links a { display: block; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.03em; padding: 6px 10px; border-radius: 6px; }
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+.mobile-btn { display: none; background: none; border: 1px solid var(--line); color: var(--body); padding: 6px; border-radius: 6px; cursor: pointer; }
+.mobile-menu { display: none; padding: 8px 20px 16px; border-top: 1px solid var(--line); }
+.mobile-menu.open { display: flex; flex-direction: column; }
+.mobile-menu a { color: var(--body); text-decoration: none; font-size: 15px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 860px) { .nav-links { display: none; } .mobile-btn { display: block; } }
+
+/* hero */
+.hero { padding: 150px 20px 90px; text-align: center; background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%); border-bottom: 1px solid var(--line); }
+.monogram { width: 96px; height: 96px; border-radius: 8px; margin: 0 auto 28px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--accent-line); background: var(--accent-soft); font: 600 32px var(--font-display); color: var(--accent); letter-spacing: 0.04em; }
+.hero h1 { font: 600 clamp(2.2rem, 5.4vw, 3.6rem)/1.1 var(--font-display); letter-spacing: -0.03em; text-wrap: balance; }
+.hero-role { margin-top: 14px; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+.hero-line { margin: 22px auto 0; max-width: 640px; color: var(--muted); font-size: 1.05rem; }
+.hero-open { margin: 8px auto 0; max-width: 620px; color: var(--muted); font-size: 1.05rem; }
+.hero-line .sep { color: var(--accent); margin: 0 8px; }
+.badge { display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; padding: 9px 18px; border: 1px solid var(--accent-line); border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; }
+.badge i { width: 7px; height: 7px; border-radius: 50%; background: var(--ink); display: inline-block; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 34px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 700 12px var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 26px; border-radius: 4px; cursor: pointer; text-decoration: none; transition: background .2s, border-color .2s; }
+.btn-gold { background: var(--accent); color: var(--on-accent); border: 1px solid var(--accent); }
+.btn-gold:hover { filter: opacity(0.85); }
+.btn-outline { background: transparent; color: var(--accent); border: 1px solid var(--accent-line); }
+.btn-outline:hover { border-color: var(--accent); background: var(--accent-soft); }
+
+/* sections */
+.section { padding: 88px 0; }
+.alt { background: var(--bg-alt); }
+.section-label { font-size: 11px; color: var(--accent); font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 10px; }
+.section-title { font: 600 clamp(1.7rem, 3.2vw, 2.3rem)/1.15 var(--font-display); letter-spacing: -0.02em; }
+.section-bar { width: 48px; height: 2px; background: var(--accent); margin: 14px 0 40px; }
+.section-desc { color: var(--muted); max-width: 60ch; margin: -22px 0 36px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 28px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 860px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: minmax(0, 1fr); } .section { padding: 64px 0; } .card { padding: 22px; } }
+
+/* about */
+.about-grid { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 24px; }
+@media (max-width: 860px) { .about-grid { grid-template-columns: minmax(0, 1fr); } }
+.about-text p { color: var(--body); font-size: 16px; line-height: 1.8; }
+.about-text p + p { margin-top: 16px; }
+.about-text strong { color: var(--ink); font-weight: 600; }
+.stats-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-content: start; }
+.stat { text-align: center; padding: 22px 14px; }
+.stat b { display: block; font: 700 32px/1 var(--font-display); color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+/* education */
+.edu-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.edu-head h3 { font: 600 21px var(--font-display); }
+.edu-head .where { color: var(--accent); font-size: 14px; font-weight: 500; margin-top: 4px; }
+.edu-head .when { color: var(--muted); font-size: 13px; }
+.grade { text-align: center; padding: 8px 18px; border: 1px solid var(--accent-line); border-radius: 8px; background: var(--accent-soft); }
+.grade b { display: block; font: 700 22px var(--font-display); color: var(--accent); }
+.grade span { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.school { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; }
+.school h3 { font: 600 17px var(--font-display); }
+.school p { color: var(--muted); font-size: 13px; }
+.school-grades { display: flex; gap: 22px; }
+.school-grades div { text-align: center; }
+.school-grades b { display: block; font: 700 18px var(--font-display); }
+.school-grades span { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.cert { display: flex; gap: 10px; align-items: flex-start; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; font-size: 14px; color: var(--body); }
+.cert::before { content: ""; width: 7px; height: 7px; margin-top: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.cert b { display: block; color: var(--ink); font-weight: 600; }
+.cert span { color: var(--muted); font-size: 13px; }
+.cert em { display: inline-block; margin-top: 4px; font-style: normal; font-size: 11px; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* experience */
+.timeline { display: grid; gap: 22px; }
+.role-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+.current { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 6px; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+.current i { width: 6px; height: 6px; border-radius: 50%; background: var(--ink); }
+.role-title { font: 600 21px var(--font-display); }
+.role-company { font-size: 14px; color: var(--accent); font-weight: 500; }
+.role-date { font-size: 12px; color: var(--muted); background: var(--tint); padding: 6px 12px; border-radius: 6px; white-space: nowrap; }
+.role-list { list-style: none; display: grid; gap: 10px; }
+.role-list li { position: relative; padding-left: 18px; color: var(--body); font-size: 15px; line-height: 1.7; }
+.role-list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 6px; height: 1px; background: var(--accent); width: 8px; }
+.role-list strong { color: var(--ink); font-weight: 600; }
+
+/* projects */
+.cat { font-size: 11px; color: var(--accent); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding-bottom: 8px; border-bottom: 1px solid var(--accent-line); margin: 0 0 18px; }
+.cat:not(:first-of-type) { margin-top: 44px; }
+.p-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); padding: 3px 11px; border: 1px solid var(--accent-line); border-radius: 999px; background: var(--accent-soft); margin-bottom: 12px; }
+.project { min-width: 0; }
+.project h4 { font: 600 19px/1.3 var(--font-display); margin-bottom: 8px; }
+.project p.what { color: var(--body); font-size: 14.5px; line-height: 1.7; }
+.flow { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 4px; margin-top: 16px; }
+.flow li { font-size: 12px; padding: 5px 10px; border-radius: 5px; background: var(--tint); border: 1px solid var(--line); color: var(--body); }
+.flow li + li::before { content: "\2192"; color: var(--accent); margin-right: 6px; }
+.flow li:last-child { border-color: var(--accent-line); color: var(--accent); }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.pill { padding: 3px 10px; border-radius: 999px; font-size: 11px; color: var(--muted); background: var(--tint); border: 1px solid var(--line); }
+.note { font-size: 13px; color: var(--muted); max-width: 66ch; margin-bottom: 18px; }
+.more { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+.more summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--ink); padding: 4px 0; }
+.more[open] summary { margin-bottom: 4px; }
+.kw-wrap { overflow-x: auto; margin-top: 16px; border: 1px solid var(--line); border-radius: 8px; }
+.kw { width: 100%; min-width: 600px; border-collapse: collapse; font-size: 13.5px; }
+.kw th { text-align: left; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 10px 12px; }
+.kw td { padding: 10px 12px; border-top: 1px solid var(--line); color: var(--body); vertical-align: top; }
+.kw td:first-child { color: var(--ink); font-weight: 600; }
+.posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 12px; margin-top: 16px; }
+.post { border: 1px solid var(--line); border-radius: 8px; background: var(--tint); padding: 16px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.post .meta { display: flex; justify-content: space-between; gap: 8px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+.post .cap { font-size: 14px; color: var(--body); white-space: pre-line; }
+.post .tags { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+
+/* skills */
+.skill-card h3 { font: 600 19px var(--font-display); margin-bottom: 4px; }
+.skill-card .sub { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+.chips li { padding: 6px 13px; font-size: 13px; color: var(--body); background: var(--tint); border: 1px solid var(--line); border-radius: 6px; }
+.skill-note { margin-top: 20px; font-size: 13px; color: var(--muted); }
+
+/* achievements */
+.ach { position: relative; padding-left: 28px; }
+.ach::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); border-radius: 3px 0 0 3px; }
+.ach .rank { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+.ach h4 { font: 600 18px/1.3 var(--font-display); margin-bottom: 4px; }
+.ach p { color: var(--muted); font-size: 14px; }
+
+/* resume + contact */
+.resume-block { display: grid; gap: 18px; justify-items: start; }
+.resume-text { color: var(--body); max-width: 56ch; }
+.resume-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.resume-block img { width: 100%; max-width: 760px; height: auto; border: 1px solid var(--line); border-radius: 6px; background: #fff; cursor: zoom-in; display: block; }
+.resume-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 260px); gap: 28px; align-items: center; }
+.resume-card img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); background: #fff; cursor: zoom-in; display: block; }
+.resume-card p { color: var(--body); max-width: 52ch; margin-bottom: 20px; }
+@media (max-width: 640px) { .resume-card { grid-template-columns: minmax(0, 1fr); } }
+.contact-card { display: block; text-align: center; text-decoration: none; color: inherit; padding: 24px 16px; }
+a.contact-card:hover { border-color: var(--accent-line); }
+.contact-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 8px; }
+.contact-value { font-size: 14px; color: var(--ink); overflow-wrap: break-word; user-select: all; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.contact-grid .email { white-space: nowrap; font-size: 13.5px; }
+@media (max-width: 960px) { .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .contact-grid .email { white-space: normal; overflow-wrap: anywhere; } }
+@media (max-width: 640px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } }
+.contact-actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+footer { border-top: 1px solid var(--line); padding: 26px 0; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--muted); }
+
+/* resume modal */
+.modal { position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.85); display: none; align-items: center; justify-content: center; padding: 16px; }
+.modal.active { display: flex; }
+.modal-box { background: var(--card); border: 1px solid var(--accent-line); border-radius: 12px; width: 100%; max-width: 860px; max-height: 94vh; display: flex; flex-direction: column; overflow: hidden; }
+.modal-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+.modal-head h3 { font: 600 18px var(--font-display); }
+.modal-close { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: var(--tint); color: var(--body); cursor: pointer; font-size: 18px; line-height: 1; }
+.modal-body { overflow-y: auto; padding: 20px; background: var(--bg); text-align: center; }
+.modal-body img { max-width: 100%; height: auto; border-radius: 4px; background: #fff; }
+.modal-foot { padding: 14px 20px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); }
+.copied { font-size: 12px; color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Vighnesh Jayakumar</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="mobile-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="container">
+    <div class="monogram" aria-hidden="true">VJ</div>
+    <h1>Vighnesh Jayakumar</h1>
+    <p class="hero-role">Entry-Level IT &amp; Operations Professional</p>
+    <p class="hero-line">BCA Graduate (2026)</p>
+    <p class="hero-open">Open to process associate, operations associate, analyst and entry-level IT roles</p>
+    <div class="badge"><i></i>Available to join immediately</div>
+    <div class="hero-buttons">
+      <button class="btn btn-gold" type="button" data-open-resume>View Resume</button>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="section alt" id="about">
+  <div class="container">
+    <p class="section-label">Profile</p>
+    <h2 class="section-title serif">About Me</h2>
+    <div class="section-bar"></div>
+    <div class="about-grid">
+      <div class="card about-text">
+        <p>I am a <strong>BCA graduate</strong> from Sri Ramakrishna College of Arts and Science, Coimbatore, building a career in IT support and operations.</p>
+        <p>I started at Willoh Publications in May 2025 as a <strong>Digital Marketing Intern</strong>. I was the first point of contact for 100+ clients, guided new clients through submission systems, and tracked and reconciled 50+ DOI applications in Excel.</p>
+        <p>In February 2026 I moved into my current role as <strong>Publication Communications Lead</strong>, which I do as a freelancer on flexible hours. I handle client queries by phone and email for 50+ accounts, log each one, follow it to an outcome, escalate urgent cases, and lead a team of 3.</p>
+        <p>Alongside that, I trained on <strong>AWS</strong> and built two security projects that watch an account for risky changes. I am now finishing the <strong>Google IT Support Professional Certificate</strong> to build a stronger base in troubleshooting, networking and operating systems.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="card stat"><b>50+</b><span>Client accounts handled</span></div>
+        <div class="card stat"><b>100+</b><span>Clients supported as an intern</span></div>
+        <div class="card stat"><b>2</b><span>AWS security projects</span></div>
+        <div class="card stat"><b>7.02</b><span>BCA CGPA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="container">
+    <p class="section-label">Career</p>
+    <h2 class="section-title serif">Experience</h2>
+    <div class="section-bar"></div>
+    <div class="timeline">
+      <article class="card">
+        <div class="role-header">
+          <div><div class="current"><i></i>Current role</div><h3 class="role-title">Publication Communications Lead</h3><p class="role-company">Willoh Publications &middot; Freelance, flexible hours</p></div>
+          <span class="role-date">Feb 2026 &ndash; Present</span>
+        </div>
+        <ul class="role-list">
+          <li>Handle <strong>client queries by phone and email for 50+ accounts</strong>, diagnosing the issue and guiding users step by step to a resolution within turnaround time.</li>
+          <li>Log every query with the steps taken and the outcome in an <strong>Excel tracker</strong>, prioritise urgent cases, and review the log to spot recurring issues.</li>
+          <li>Escalate unresolved cases to the right team in time, and follow up with clients until they are resolved.</li>
+          <li>Write and maintain <strong>SOPs</strong> the team uses as a reference, and lead a team of 3 with daily targets.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="role-header">
+          <div><h3 class="role-title">AWS Intern</h3><p class="role-company">App Innovation Technologies &middot; Coimbatore, on-site</p></div>
+          <span class="role-date">Jul 2026 &ndash; Oct 2026</span>
+        </div>
+        <ul class="role-list">
+          <li>Built a <strong>security monitoring system</strong> using CloudTrail, CloudWatch and SNS that sends email alerts on suspicious activity.</li>
+          <li>Built an <strong>S3 security project</strong> using AWS Config and EventBridge to detect misconfigurations.</li>
+          <li>Worked with core AWS services: EC2, VPC, S3, IAM, RDS, Load Balancers and Auto Scaling.</li>
+          <li>Learned Linux, networking, and the basics of Git and GitHub Actions.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="role-header">
+          <div><h3 class="role-title">Digital Marketing Intern</h3><p class="role-company">Willoh Publications</p></div>
+          <span class="role-date">May 2025 &ndash; Feb 2026</span>
+        </div>
+        <ul class="role-list">
+          <li>First point of contact for <strong>100+ clients</strong>, answering process queries by email within deadlines.</li>
+          <li>Guided new clients and authors step by step through submission systems.</li>
+          <li>Tracked and reconciled <strong>50+ DOI applications</strong> in Excel with strong attention to detail.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="role-header">
+          <div><h3 class="role-title">Branding Intern</h3><p class="role-company">Whimsgic Studios</p></div>
+          <span class="role-date">Jan 2025 &ndash; Mar 2025</span>
+        </div>
+        <ul class="role-list">
+          <li>Developed brand identity concepts and client-ready deliverables, working with the creative team to meet client timelines.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section alt" id="projects">
+  <div class="container">
+    <p class="section-label">Work</p>
+    <h2 class="section-title serif">Projects</h2>
+    <div class="section-bar"></div>
+
+    <p class="cat">Cloud and IT</p>
+    <div class="grid-2">
+      <article class="card project">
+        <span class="p-badge">AWS lab project</span>
+        <h4>AWS Security Monitoring Pipeline</h4>
+        <p class="what">A multi-region CloudTrail trail writes logs to an encrypted S3 bucket and streams them to CloudWatch Logs. Metric filters watch for root login, failed console logins, unauthorized API attempts and security group changes, and alarms send an email alert through SNS.</p>
+        <ol class="flow" aria-label="Architecture flow"><li>CloudTrail</li><li>CloudWatch Logs</li><li>Metric filters</li><li>Alarms</li><li>SNS</li><li>Email alert</li></ol>
+        <div class="pills"><span class="pill">CloudTrail</span><span class="pill">CloudWatch</span><span class="pill">SNS</span><span class="pill">S3</span><span class="pill">KMS</span><span class="pill">IAM</span></div>
+      </article>
+      <article class="card project">
+        <span class="p-badge">AWS lab project</span>
+        <h4>S3 Security Hardening and Misconfiguration Detection</h4>
+        <p class="what">Secured an S3 bucket with public access blocked, versioning, default encryption and least-privilege IAM. AWS Config rules, EventBridge and SNS detect misconfigurations such as public access or disabled versioning, and send an email alert.</p>
+        <ol class="flow" aria-label="Architecture flow"><li>S3</li><li>CloudTrail</li><li>AWS Config rules</li><li>EventBridge</li><li>SNS</li><li>Email alert</li></ol>
+        <div class="pills"><span class="pill">S3</span><span class="pill">IAM</span><span class="pill">CloudTrail</span><span class="pill">AWS Config</span><span class="pill">EventBridge</span><span class="pill">SNS</span></div>
+      </article>
+    </div>
+
+    <p class="cat">Digital marketing practice</p>
+    <div class="card project">
+      <span class="p-badge">Practice &middot; Fictional brand</span>
+      <h4>Pagebound Caf&eacute;: SEO plan and social posts</h4>
+      <p class="what">I am learning digital marketing alongside my work at Willoh Publications. These are practice pieces for a made-up bookshop caf&eacute; in Coimbatore. They are not client work and contain no real results.</p>
+      <details class="more">
+        <summary>Local SEO plan: 5 search topics mapped to pages</summary>
+        <div class="kw-wrap">
+          <table class="kw">
+            <thead><tr><th>Search topic</th><th>What the searcher wants</th><th>Target page</th><th>Draft title tag</th></tr></thead>
+            <tbody>
+              <tr><td>bookshop cafe in Coimbatore</td><td>Find a place nearby</td><td>Home</td><td>Pagebound Caf&eacute; | Bookshop &amp; Caf&eacute; in Coimbatore</td></tr>
+              <tr><td>cafe to study in Coimbatore</td><td>Quiet seat, wifi, hours</td><td>Study corner</td><td>Study-Friendly Caf&eacute; in Coimbatore | Pagebound</td></tr>
+              <tr><td>book club Coimbatore</td><td>Join a reading group</td><td>Events</td><td>Book Club &amp; Reading Events in Coimbatore | Pagebound</td></tr>
+              <tr><td>second hand books Coimbatore</td><td>Buy used books</td><td>Used books</td><td>Second-Hand Books in Coimbatore | Pagebound</td></tr>
+              <tr><td>best coffee near RS Puram</td><td>Find good coffee close by</td><td>Menu</td><td>Specialty Coffee Menu, RS Puram | Pagebound</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <details class="more">
+        <summary>Sample social media posts: 4 posts, 3 content pillars</summary>
+        <div class="posts">
+          <div class="post"><div class="meta"><span>Instagram carousel</span><span>Books</span></div><p class="cap">Monday reading list: 3 short books you can finish in a weekend.
+Swipe for the picks, then tell us what you are reading in the comments.</p><p class="tags">#CoimbatoreReads #BookRecommendations #WeekendReading</p></div>
+          <div class="post"><div class="meta"><span>Instagram photo</span><span>Caf&eacute;</span></div><p class="cap">The study corner is open till 9 pm.
+Strong wifi, plug points and a cold coffee that lasts through a full chapter.</p><p class="tags">#StudyCafe #Coimbatore #RSPuram</p></div>
+          <div class="post"><div class="meta"><span>Instagram reel</span><span>Community</span></div><p class="cap">Book of the week, in 15 seconds.
+Our barista picks one title off the shelf and says why. Come borrow the next one on Friday.</p><p class="tags">#BookOfTheWeek #BookstagramIndia #CoimbatoreEvents</p></div>
+          <div class="post"><div class="meta"><span>LinkedIn post</span><span>Community</span></div><p class="cap">Small businesses do not need a big budget to build a local community.
+We started a Friday book club with ten chairs and one rule: bring a book you loved.</p><p class="tags">#SmallBusiness #CommunityBuilding #Coimbatore</p></div>
+        </div>
+      </details>
+      <div class="pills"><span class="pill">Keyword research</span><span class="pill">On-page SEO</span><span class="pill">Content writing</span><span class="pill">Content calendar</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="container">
+    <p class="section-label">Capabilities</p>
+    <h2 class="section-title serif">Skills</h2>
+    <div class="section-bar"></div>
+    <div class="grid-2">
+      <div class="card skill-card">
+        <h3>Customer Support</h3><p class="sub">Day-to-day work</p>
+        <ul class="chips"><li>Phone and email support</li><li>Troubleshooting</li><li>Escalation management</li><li>SLA adherence</li><li>Query logging and tracking</li><li>SOP documentation</li><li>MS Excel</li><li>MS Office</li></ul>
+      </div>
+      <div class="card skill-card">
+        <h3>Cloud and IT</h3><p class="sub">Hands-on and learning</p>
+        <ul class="chips"><li>EC2</li><li>VPC</li><li>IAM</li><li>S3</li><li>RDS</li><li>CloudTrail</li><li>CloudWatch</li><li>SNS</li><li>AWS Config</li><li>EventBridge</li><li>Linux basics</li><li>Networking basics</li><li>Git and GitHub Actions basics</li></ul>
+        <p class="skill-note">DevOps and Windows desktop support are early-stage skills I am still building, through the Google IT Support certificate.</p>
+      </div>
+      <div class="card skill-card">
+        <h3>Digital Marketing</h3><p class="sub">Learning</p>
+        <ul class="chips"><li>SEO basics</li><li>Keyword research</li><li>Content writing</li><li>Social media captions</li><li>Content calendars</li></ul>
+      </div>
+      <div class="card skill-card">
+        <h3>Languages</h3><p class="sub">Spoken</p>
+        <ul class="chips"><li>English (fluent)</li><li>Tamil (fluent)</li><li>Malayalam (fluent)</li><li>Hindi (conversational)</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section alt" id="education">
+  <div class="container">
+    <p class="section-label">Academics</p>
+    <h2 class="section-title serif">Education and Certifications</h2>
+    <div class="section-bar"></div>
+    <div style="display:grid; grid-template-columns:minmax(0,1fr); gap:20px;">
+      <div class="card">
+        <div class="edu-head">
+          <div><h3>Bachelor of Computer Applications (BCA)</h3><p class="where">Sri Ramakrishna College of Arts and Science, Coimbatore</p><p class="when">2023 &ndash; 2026</p></div>
+          <div class="grade"><b>7.02</b><span>CGPA</span></div>
+        </div>
+      </div>
+      <div class="card school">
+        <div><h3>Lisieux Matriculation Higher Secondary School</h3><p>Higher Secondary and High School</p></div>
+        <div class="school-grades"><div><b>88%</b><span>HSC 2023</span></div><div><b>All Pass</b><span>SSLC 2021</span></div></div>
+      </div>
+    </div>
+    <p class="cat" style="margin-top:44px;">Certifications</p>
+    <div class="grid-3">
+      <div class="cert"><div><b>Google IT Support Professional Certificate</b><span>Coursera</span><br><em>In progress &middot; due Nov 2026</em></div></div>
+      <div class="cert"><div><b>AWS Certification</b><span>AI Tech Academy of App Innovation Technologies, 2026</span></div></div>
+      <div class="cert"><div><b>Generative AI: Introduction and Applications</b><span>IBM</span></div></div>
+      <div class="cert"><div><b>Agile Methodology and DevOps Integration</b><span>L&amp;T EduTech</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="section" id="achievements">
+  <div class="container">
+    <p class="section-label">Recognition</p>
+    <h2 class="section-title serif">Achievements</h2>
+    <div class="section-bar"></div>
+    <div class="grid-2">
+      <div class="card ach"><p class="rank">Certificate of Excellence</p><h4>Top Performing Student</h4><p>L&amp;T EduTech Integrated Course, with Sri Ramakrishna College of Arts and Science</p></div>
+      <div class="card ach"><p class="rank">Certificate of Participation</p><h4>Live Hackathon</h4><p>iRohub Infotech, February 2026</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="section alt" id="resume">
+  <div class="container">
+    <p class="section-label">Document</p>
+    <h2 class="section-title serif">Resume</h2>
+    <div class="section-bar"></div>
+    <div class="resume-block">
+      <p class="resume-text">A one-page summary of my experience, skills and certifications. Select the page to read it full size, or email me for the PDF.</p>
+      <div class="resume-actions"><button class="btn btn-gold" type="button" data-open-resume>Read Full Size</button><a class="btn btn-outline" href="#contact">Request PDF</a></div>
+      <img src="resume-preview.jpg" alt="Preview of Vighnesh Jayakumar's one-page resume" width="993" height="1404" data-open-resume>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container" style="text-align:center;">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title serif">Let&rsquo;s Connect</h2>
+    <div class="section-bar" style="margin-inline:auto;"></div>
+    <p class="section-desc" style="margin-inline:auto; margin-top:-22px;">Hiring for an entry-level IT, process or analyst role? I am available to join immediately.</p>
+    <div class="contact-grid">
+      <div class="card contact-card"><p class="contact-label">Email</p><p class="contact-value email">vighneshjayakumar77@gmail.com</p></div>
+      <a class="card contact-card" href="https://linkedin.com/in/vighnesh-jayakumar" target="_blank" rel="noopener"><p class="contact-label">LinkedIn</p><p class="contact-value">linkedin.com/in/vighnesh-jayakumar</p></a>
+      <a class="card contact-card" href="tel:+917904335099"><p class="contact-label">Phone</p><p class="contact-value">+91 79043 35099</p></a>
+      <div class="card contact-card"><p class="contact-label">Location</p><p class="contact-value">Coimbatore, India. Open to relocation anywhere.</p></div>
+      <div class="card contact-card"><p class="contact-label">Languages</p><p class="contact-value">English &middot; Tamil &middot; Malayalam &middot; Hindi</p></div>
+    </div>
+    <div class="contact-actions">
+      <a class="btn btn-gold" href="mailto:vighneshjayakumar77@gmail.com">Email Me</a>
+      <button class="btn btn-outline" type="button" id="copyMail">Copy Email</button>
+      <span class="copied" id="copied" role="status"></span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner"><span>&copy; Vighnesh Jayakumar</span><span>Available to join immediately</span></div>
+</footer>
+
+<!-- RESUME MODAL -->
+<div class="modal" id="resumeModal" role="dialog" aria-modal="true" aria-label="Resume">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Resume</h3><button class="modal-close" type="button" id="closeModal" aria-label="Close">&times;</button></div>
+    <div class="modal-body"><img src="resume-preview.jpg" alt="Vighnesh Jayakumar's resume"></div>
+    <div class="modal-foot"><span>Email me for the PDF copy.</span><a class="btn btn-outline" href="resume-preview.jpg" target="_blank" rel="noopener">Open in new tab</a></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var menuBtn = document.getElementById('menuBtn'), menu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', function () {
+    var open = menu.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }); });
+
+  var sections = document.querySelectorAll('section[id]'), links = document.querySelectorAll('.nav-links a');
+  function onScroll() {
+    var cur = '';
+    sections.forEach(function (s) { if (window.scrollY >= s.offsetTop - 160) cur = s.id; });
+    links.forEach(function (l) { l.classList.toggle('active', l.getAttribute('href') === '#' + cur); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  var modal = document.getElementById('resumeModal');
+  function openModal() { modal.classList.add('active'); }
+  function closeModal() { modal.classList.remove('active'); }
+  document.querySelectorAll('[data-open-resume]').forEach(function (el) { el.addEventListener('click', openModal); });
+  document.getElementById('closeModal').addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+  var copyBtn = document.getElementById('copyMail'), note = document.getElementById('copied');
+  copyBtn.addEventListener('click', function () {
+    var text = 'vighneshjayakumar77@gmail.com';
+    function done(ok) { note.textContent = ok ? 'Email copied' : 'Select the email above and press Ctrl+C'; setTimeout(function () { note.textContent = ''; }, 2500); }
+    try { navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); }); } catch (e) { done(false); }
+  });
+})();
+</script>
+
+</body>
+</html>
